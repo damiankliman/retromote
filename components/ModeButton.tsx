@@ -11,7 +11,7 @@ const ModeButton: FC<ModeButtonProps> = ({ text, onPress }) => {
     <Pressable onPressOut={onPress} className="w-40">
       {({ pressed }) => (
         <View
-          className={`mb-8 block w-auto max-w-fit items-center justify-center rounded-2xl bg-gray-200 p-4 shadow-sm ${
+          className={`mb-8 block w-auto max-w-fit items-center justify-center rounded-2xl bg-gray-100 p-4 shadow-sm ${
             pressed && "opacity-70"
           }`}
         >

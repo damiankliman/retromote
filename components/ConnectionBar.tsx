@@ -21,7 +21,7 @@ const ConnectionBar = () => {
           <View className="mr-3 h-3 w-3 rounded-full bg-red-500" />
           <View className="flex-1 flex-row items-center justify-between">
             <Text className="text-lg leading-none text-gray-400">
-              Tap to connect...
+              Disconnected - Tap to connect...
             </Text>
             <FontAwesomeIcon icon={faAngleRight} size={20} color="#A1A1AA" />
           </View>
