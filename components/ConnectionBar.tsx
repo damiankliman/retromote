@@ -1,10 +1,17 @@
-import { Text, View, Pressable } from "react-native";
+import { Text, View, Pressable, Platform, Linking } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const ConnectionBar = () => {
   return (
-    <Pressable className="w-full p-3">
+    <Pressable
+      className="w-full p-3"
+      onPress={() => {
+        Platform.OS === "ios"
+          ? Linking.openURL("App-Prefs:Bluetooth")
+          : Linking.sendIntent("android.settings.BLUETOOTH_SETTINGS");
+      }}
+    >
       {({ pressed }) => (
         <View
           className={`w-auto flex-row items-center rounded-3xl bg-gray-100 px-4 py-2 ${
