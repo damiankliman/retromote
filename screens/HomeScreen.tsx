@@ -1,12 +1,14 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 import ConnectionBar from "../components/ConnectionBar";
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="bg-white">
       <ConnectionBar />
-      <Text>HomeScreen</Text>
+      <View className="h-full">
+        <Text>HomeScreen</Text>
+      </View>
     </SafeAreaView>
   );
 };
