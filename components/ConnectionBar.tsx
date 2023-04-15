@@ -14,7 +14,7 @@ const ConnectionBar = () => {
     >
       {({ pressed }) => (
         <View
-          className={`w-auto flex-row items-center rounded-3xl bg-gray-100 px-4 py-2 ${
+          className={`w-auto flex-row items-center rounded-3xl bg-gray-100 px-5 py-3 ${
             pressed && "opacity-70"
           }`}
         >
