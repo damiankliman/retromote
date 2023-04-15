@@ -1,14 +1,14 @@
 import { Text, View } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const ConnectionBar = () => {
   return (
-    <View className="py-4 px-4 items-center flex-row gap-3 border-b">
-      <FontAwesomeIcon icon={faCircleDot} />
-      <View className="flex-row justify-between flex-1">
-        <Text>Tap to connect...</Text>
-        <Text>-7</Text>
+    <View className="flex-row items-center gap-3 px-4 py-4">
+      <View className="h-3 w-3 animate-pulse rounded-full bg-red-500" />
+      <View className="flex-1 flex-row items-center justify-between">
+        <Text className="text-lg text-gray-400">Tap to connect...</Text>
+        <FontAwesomeIcon icon={faAngleRight} size={20} color="#A1A1AA" />
       </View>
     </View>
   );
