@@ -14,9 +14,9 @@ const HeaderBar: FC<HeaderBarProps> = ({ screenTitle }) => {
   return (
     <View className="w-full flex-row items-center gap-3 p-3">
       <Pressable onPressOut={() => navigation.goBack()}>
-        <FontAwesomeIcon icon={faArrowLeft} size={30} color="#A1A1AA" />
+        <FontAwesomeIcon icon={faArrowLeft} size={30} color="#3F3F46" />
       </Pressable>
-      <Text className="text-xl font-medium text-gray-400">{screenTitle}</Text>
+      <Text className="text-xl font-medium text-gray-700">{screenTitle}</Text>
     </View>
   );
 };

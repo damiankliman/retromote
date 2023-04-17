@@ -41,7 +41,7 @@ const TimeSelector: FC<TimeSelectorProps> = ({ timerValue, setTimerValue }) => {
           inputMode="numeric"
           textAlign="center"
           returnKeyType="done"
-          className="h-20 w-36 items-center justify-center rounded-xl bg-gray-200 text-center text-5xl font-semibold leading-[55px] text-gray-500"
+          className="h-20 w-36 items-center justify-center rounded-xl bg-gray-200 text-center text-5xl font-semibold leading-[55px] text-gray-700"
         />
         <Text className="absolute bottom-1 right-2 font-semibold text-gray-400">
           S
