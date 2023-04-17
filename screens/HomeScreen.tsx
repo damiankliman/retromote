@@ -1,26 +1,20 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import ConnectionBar from "../components/ConnectionBar";
 import ModeButton from "../components/ModeButton";
 
 const modes = [
   {
     text: "M",
-    onPress: () => {
-      console.log("Manual mode");
-    },
+    targetScreen: "Manual",
   },
   {
     text: "B",
-    onPress: () => {
-      console.log("Bulb mode");
-    },
+    targetScreen: "Bulb",
   },
   {
     text: "T",
-    onPress: () => {
-      console.log("Bulb timer mode");
-    },
+    targetScreen: "Timer",
   },
 ];
 
@@ -30,7 +24,11 @@ const HomeScreen = () => {
       <ConnectionBar />
       <View className="w-full flex-grow flex-col items-center justify-center">
         {modes.map((mode, index) => (
-          <ModeButton key={index} text={mode.text} onPress={mode.onPress} />
+          <ModeButton
+            key={index}
+            text={mode.text}
+            targetScreen={mode.targetScreen}
+          />
         ))}
       </View>
     </SafeAreaView>

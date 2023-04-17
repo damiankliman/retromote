@@ -1,14 +1,20 @@
 import { FC } from "react";
 import { Pressable, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 interface ModeButtonProps {
   text: string;
-  onPress: () => void;
+  targetScreen: string;
 }
 
-const ModeButton: FC<ModeButtonProps> = ({ text, onPress }) => {
+const ModeButton: FC<ModeButtonProps> = ({ text, targetScreen }) => {
+  const navigation = useNavigation();
+
   return (
-    <Pressable onPressOut={onPress} className="w-40">
+    <Pressable
+      onPressOut={() => navigation.navigate(targetScreen as never)}
+      className="w-40"
+    >
       {({ pressed }) => (
         <View
           className={`mb-8 block w-auto max-w-fit items-center justify-center rounded-2xl bg-gray-100 p-4 shadow-sm ${
