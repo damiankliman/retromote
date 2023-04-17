@@ -1,10 +1,13 @@
 import { View, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import HeaderBar from "../components/HeaderBar";
 
 const BulbScreen = () => {
   return (
-    <View>
-      <Text>ManualScreen</Text>
-    </View>
+    <SafeAreaView className="h-full bg-white">
+      <HeaderBar screenTitle="Bulb" />
+      <Text>BulbScreen</Text>
+    </SafeAreaView>
   );
 };
 export default BulbScreen;
