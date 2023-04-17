@@ -6,7 +6,7 @@ import HeaderBar from "../components/HeaderBar";
 
 const ManualScreen = () => {
   const handleShutterPress = () => {
-    console.log("Pressed");
+    console.log("Release shutter");
   };
 
   return (
