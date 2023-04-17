@@ -23,7 +23,14 @@ const TimeSelector: FC<TimeSelectorProps> = ({ timerValue, setTimerValue }) => {
           timerValue > 0 ? setTimerValue(timerValue - 1) : null
         }
       >
-        <FontAwesomeIcon icon={faCaretLeft} size={120} color="#A1A1AA" />
+        {({ pressed }) => (
+          <FontAwesomeIcon
+            icon={faCaretLeft}
+            size={120}
+            color="#A1A1AA"
+            style={{ opacity: pressed ? 0.7 : 1 }}
+          />
+        )}
       </Pressable>
       <View className="relative">
         <TextInput
@@ -41,7 +48,14 @@ const TimeSelector: FC<TimeSelectorProps> = ({ timerValue, setTimerValue }) => {
         </Text>
       </View>
       <Pressable onPressIn={() => setTimerValue(timerValue + 1)}>
-        <FontAwesomeIcon icon={faCaretRight} size={120} color="#A1A1AA" />
+        {({ pressed }) => (
+          <FontAwesomeIcon
+            icon={faCaretRight}
+            size={120}
+            color="#A1A1AA"
+            style={{ opacity: pressed ? 0.7 : 1 }}
+          />
+        )}
       </Pressable>
     </View>
   );
