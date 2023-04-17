@@ -6,15 +6,15 @@ import ModeButton from "../components/ModeButton";
 const modes = [
   {
     text: "M",
-    targetScreen: "ManualScreen",
+    targetScreen: "Manual",
   },
   {
     text: "B",
-    targetScreen: "BulbScreen",
+    targetScreen: "Bulb",
   },
   {
     text: "T",
-    targetScreen: "TimerScreen",
+    targetScreen: "Timer",
   },
 ];
 
